@@ -8,7 +8,7 @@ module.exports = function(context) {
         var layers = [{ 
             title: 'Leaf-On',  
             layer: L.layerGroup(['leafon'])
-        };
+        }];
 
         var layerSwap = function(d) {
             var clicked = this instanceof d3.selection ? this.node() : this;
