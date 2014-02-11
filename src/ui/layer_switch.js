@@ -2,21 +2,10 @@ module.exports = function(context) {
 
     return function(selection) {
 
-        var layers = [{
-            title: 'MapBox',
-            layer: L.mapbox.tileLayer('tmcw.map-7s15q36b', {
-                detectRetina: true
-            })
-        }, {
-            title: 'Satellite',
-            layer: L.mapbox.tileLayer('tmcw.map-j5fsp01s', {
-                detectRetina: true
-            })
-        }, {
-            title: 'OSM',
-            layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            })
+        var layers = [{ 
+            title: 'Leaf-On',  
+            layer: L.tileLayer('http://69.54.58.148:8080/tiles/osm_EPSG900913/{z}/{x}/{y}.png?origin=nw', {
+                tms: false })
         }];
 
         var layerSwap = function(d) {
