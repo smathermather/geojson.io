@@ -2,11 +2,13 @@ module.exports = function(context) {
 
     return function(selection) {
 
+        var leafon = L.tileLayer('http://69.54.58.148:8080/tiles/osm_EPSG900913/{z}/{x}/{y}.png?origin=nw', {
+                tms: false });
+
         var layers = [{ 
             title: 'Leaf-On',  
-            layer: L.tileLayer('http://69.54.58.148:8080/tiles/osm_EPSG900913/{z}/{x}/{y}.png?origin=nw', {
-                tms: false })
-        }];
+            layer: L.layerGroup(['leafon'])
+        };
 
         var layerSwap = function(d) {
             var clicked = this instanceof d3.selection ? this.node() : this;
