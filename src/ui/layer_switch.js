@@ -9,7 +9,7 @@ module.exports = function(context) {
         },
         { 
             title: 'Leaf-Off',  
-            layer: L.tileLayer('http://69.54.58.148:8090/tiles/osm_EPSG900913/{z}/{x}/{y}.png?origin=nw', {
+            layer: L.tileLayer('http://69.54.58.148:8070/tiles/osm_EPSG900913/{z}/{x}/{y}.png?origin=nw', {
                 tms: false })
         }];
 
