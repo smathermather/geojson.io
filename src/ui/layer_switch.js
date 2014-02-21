@@ -4,13 +4,13 @@ module.exports = function(context) {
 
         var layers = [
         {
-            title: 'Leaf-off',
+            title: 'Labeled Aerial',
             layer: L.mapbox.tileLayer('tmcw.map-j5fsp01s', {
                 detectRetina: true
             })
         },
         { 
-            title: 'OSIP',  
+            title: 'Leaf-Off',  
             layer: L.tileLayer('http://69.54.58.148:8090/tiles/osm_EPSG900913/{z}/{x}/{y}.png?origin=nw', {
                 tms: false })
         },
